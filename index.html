@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>RealPhones</title>
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<h1><i class="fa fa-mobile"><span class="logohead"> Real Phones</span></i></h1>
+			</div>
+			<div class="links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="img/mobile.png" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					<img src="img/camera.png">
+					<div>
+						<h1>Camera</h1>
+						<p>60MP , Wide Angle Lens</p>
+					</div>
+				</div>
+				<div class="feature two">
+					<img src="img/processor.png">
+					<div>
+						<h1>Processor</h1>
+						<p>Snapdragon830 11nm processor</p>
+					</div>
+				</div>
+				<div class="feature three">
+					<img src="img/display.png">
+					<div>
+						<h1>Display</h1>
+						<p>13.5" Max display</p>
+					</div>
+				</div>
+				<div class="feature four">
+					<img src="img/battery.png">
+					<div>
+						<h1>Battery</h1>
+						<p>5000mAh , Long Lasting Battery</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<img src="img/arrow.png" id="upbtn">
+			<h3>Features</h3>
+			<img src="img/arrow.png" id="dwnbtn">
+		</div>
+	</div>
+<script type="text/javascript">
+	var circle = document.getElementById("circle");
+	var upbtn = document.getElementById("upbtn");
+	var dwnbtn = document.getElementById("dwnbtn");
+	
+	var rotate = circle.style.transform;
+	var rotatesum;
+
+	upbtn.onclick = function()
+	{
+		rotatesum = rotate + "rotate(-90deg)";
+		circle.style.transform = rotatesum;
+		rotate = rotatesum;
+	}
+
+	dwnbtn.onclick = function()
+	{
+		rotatesum = rotate + "rotate(+90deg)";
+		circle.style.transform = rotatesum;
+		rotate = rotatesum;
+	}
+</script>
+</body>
+</html>
